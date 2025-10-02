@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="300">
+  <title>Bandejita Mate - La tradición es esencia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'logo-bg': '#F2EBDC',
+            'secundario-bg': '#593C22',
+            'terciario-bg': '#736355'
+          }
+           },
+        }
+      }
+
+  </script>
+</head>
+<body class="bg-logo-bg font-sans">
+  <!-- Barra de navegación -->
+  <nav class="bg-secundario-bg text-white py-4">
+    <div class="container mx-auto px-4">
+      <ul class="flex justify-center space-x-6">
+        <li><a href="#home" class="hover:text-gray-400">Inicio</a></li>
+        <li><a href="#products" class="hover:text-gray-400">Productos</a></li>
+        <li><a href="#about" class="hover:text-gray-400">Nuestra Historia</a></li>
+        <li><a href="#mission-vision" class="hover:text-gray-400">Misión y Visión</a></li>
+        <li><a href="#contact" class="hover:text-gray-400">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sección Principal -->
+  <section id="home" class="py-12">
+    <div class="container mx-auto px-4 text-center">
+      <img src="imagen/logo.png" alt="Bandejita Mate Logo" class="mx-auto h-62">
+      <p class="text-lg mt-4 max-w-2xl mx-auto">
+        Un proyecto innovador que une tradición, creatividad y sustentabilidad, creando bandejas decorativas a partir de yerba mate reutilizada.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección de Productos -->
+  <section id="products" class="bg-logo-bg py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-8">Nuestras Bandejas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Producto 1 -->
+        <div class="border rounded-lg p-6 shadow-lg text-center">
+          <img src="imagen/imagen1.png" alt="Bandeja Clásica" class="w-full h-64 object-cover rounded mb-4">
+          <h3 class="text-xl font-bold">Bandeja Clásica</h3>
+          <p class="text-gray-400 mt-2">Una bandeja elegante elaborada con yerba mate reutilizada, perfecta para cualquier hogar.</p>
+          <p class="text-lg font-semibold mt-4">$13,600</p>
+          <a href="contact.html?product=Clasica" class="mt-4 inline-block bg-secundario-bg text-white py-2 px-4 rounded hover:bg-secundario-bg/80">Comprar</a>
+        </div>
+        <!-- Producto 2 -->
+        <div class="border rounded-lg p-6 shadow-lg text-center">
+          <img src="imagen/imagen2.png" alt="Bandeja Moderna" class="w-full h-64 object-cover rounded mb-4">
+          <h3 class="text-xl font-bold">Bandeja Moderna</h3>
+          <p class="text-gray-400 mt-2">Diseño contemporáneo con la esencia de la yerba mate, ideal para espacios modernos.</p>
+          <p class="text-lg font-semibold mt-4">$13,600</p>
+          <a href="contact.html?product=Moderna" class="mt-4 inline-block bg-secundario-bg text-white py-2 px-4 rounded hover:bg-secundario-bg/80">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Historia -->
+  <section id="about" class="py-12 bg-terciario-bg">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-8">Nuestra Historia</h2>
+      <p class="text-lg max-w-3xl mx-auto">
+        Bandejita Mate nació como un proyecto innovador, creado por tres estudiantes que buscan resaltar la cultura y la sustentabilidad. La idea surgió de aprovechar un recurso natural representativo de la Argentina: la yerba mate. A partir de ella, se diseñaron bandejas decorativas y funcionales, logrando unir tradición, creatividad y conciencia ecológica. Aunque comenzó como un trabajo académico, se transformó en un emprendimiento que busca crecer en el mercado artesanal y sostenible.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección de Misión y Visión -->
+  <section id="mission-vision" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-8">Misión y Visión</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="text-center">
+          <h3 class="text-xl font-bold">Misión</h3>
+          <p class="text-black mt-4">
+            Ofrecer bandejas decorativas elaboradas a partir de yerba mate reutilizada, fusionando tradición, creatividad y conciencia ambiental. Buscamos transformar un recurso culturalmente significativo en piezas únicas y sustentables que embellezcan los hogares y promuevan el consumo responsable.
+          </p>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold">Visión</h3>
+          <p class="text-black mt-4">
+            Convertirse en un referente nacional en el diseño y producción de artesanías sostenibles, expandiendo nuestro impacto en el mercado y consolidándonos como un ejemplo de innovación juvenil y compromiso con el medio ambiente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contact" class="bg-terciario-bg  py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold mb-8">Contáctanos</h2>
+      <p class="text-lg">
+        Síguenos en Instagram: <a href="https://www.instagram.com/bandejitamate" class="underline hover:text-gray-400" target="_blank">@bandejitamate</a>
+      </p>
+      <p class="text-lg mt-2">
+        Envíanos un correo: <a href="mailto:bandejitamate@gmail.com" class="underline hover:text-gray-400">bandejitamate@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="bg-gray-800 text-white py-4 ">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Bandejita Mate. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
