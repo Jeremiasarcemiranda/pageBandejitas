@@ -23,17 +23,29 @@
 </head>
 <body class="bg-logo-bg font-sans">
   <!-- Barra de navegación -->
-  <nav class="bg-secundario-bg text-white py-4">
-    <div class="container mx-auto px-4">
-      <ul class="flex justify-center space-x-6">
-        <li><a href="#home" class="hover:text-gray-400">Inicio</a></li>
-        <li><a href="#products" class="hover:text-gray-400">Productos</a></li>
-        <li><a href="#about" class="hover:text-gray-400">Nuestra Historia</a></li>
-        <li><a href="#mission-vision" class="hover:text-gray-400">Misión y Visión</a></li>
-        <li><a href="#contact" class="hover:text-gray-400">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="bg-secundario-bg text-white py-4">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    
+    <ul class="flex space-x-6">
+      <li><a href="#home" class="hover:text-gray-400">Inicio</a></li>
+      <li><a href="#products" class="hover:text-gray-400">Productos</a></li>
+      <li><a href="#about" class="hover:text-gray-400">Nuestra Historia</a></li>
+      <li><a href="#mission-vision" class="hover:text-gray-400">Misión y Visión</a></li>
+      <li><a href="#contact" class="hover:text-gray-400">Contacto</a></li>
+    </ul>
+
+    <form class="flex items-center w-80">
+      <input type="search" placeholder="Buscar productos..." class="py-1 px-3 w-full rounded-l-md text-black focus:outline-none focus:ring-2 focus:ring-terciario-bg">
+      <button type="submit" class="bg-terciario-bg text-white py-1 px-3 rounded-r-md hover:bg-terciario-bg/80">
+        Buscar
+      </button>
+    </form>
+    
+    <div>
+        </div>
+    
+  </div>
+</nav>
 
   <!-- Sección Principal -->
   <section id="home" class="py-12">
