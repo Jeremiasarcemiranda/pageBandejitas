@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-g">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="refresh" content="300">
   <title>Bandejita Mate - La tradición es esencia</title>
@@ -14,118 +14,110 @@
             'logo-bg': '#F2EBDC',
             'secundario-bg': '#593C22'
           }
-           },
-        }
+        },
       }
-
+    }
   </script>
 </head>
-<body class="bg-logo-bg font-sans">
-  <!-- Barra de navegación -->
-<nav class="bg-secundario-bg text-white py-4">
-  <div class="container mx-auto px-4 flex justify-between items-center">
-    
-    <ul class="flex space-x-6">
-      <li><a href="#home" class="hover:text-gray-400">Inicio</a></li>
-      <li><a href="#products" class="hover:text-gray-400">Productos</a></li>
-      <li><a href="#about" class="hover:text-gray-400">Nuestra Historia</a></li>
-      <li><a href="#mission-vision" class="hover:text-gray-400">Misión y Visión</a></li>
-      <li><a href="#contact" class="hover:text-gray-400">Contacto</a></li>
-    </ul>
+<body class="bg-logo-bg font-sans text-secundario-bg">
 
-    <form **action="/search" method="get"** class="flex items-center w-80">       <input type="search" **name="q"** placeholder="Buscar productos..." class="py-1 px-3 w-full rounded-l-md text-black focus:outline-none focus:ring-2 focus:ring-secundario-bg">       <button type="submit" class="bg-secundario-bg text-white py-1 px-3 rounded-r-md hover:bg-secundario-bg/80">
-        Buscar
+  <nav class="bg-secundario-bg text-white py-4 sticky top-0 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="#home" class="text-xl font-bold">Bandejita Mate</a>
+
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#products" class="hover:text-gray-300">Productos</a></li>
+        <li><a href="#about" class="hover:text-gray-300">Nuestra Historia</a></li>
+        <li><a href="#contact" class="hover:text-gray-300">Contacto</a></li>
+      </ul>
+
+      <button id="menu-btn" class="md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
       </button>
-    </form>
-    
-    ****
-  </div>
-</nav>
+    </div>
 
-  <!-- Sección Principal -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2">
+      <a href="#products" class="block hover:text-gray-300">Productos</a>
+      <a href="#about" class="block hover:text-gray-300">Nuestra Historia</a>
+      <a href="#contact" class="block hover:text-gray-300">Contacto</a>
+    </div>
+  </nav>
+
   <section id="home" class="py-12">
     <div class="container mx-auto px-4 text-center">
-      <img src="logo.png" alt="Bandejita Mate Logo" class="mx-auto h-62">
+      <img src="logo.png" alt="Bandejita Mate Logo" class="mx-auto h-48 sm:h-62"> <h1 class="text-3xl md:text-4xl font-bold mt-4">La tradición es esencia</h1>
       <p class="text-lg mt-4 max-w-2xl mx-auto">
         Un proyecto innovador que une tradición, creatividad y sustentabilidad, creando bandejas decorativas a partir de yerba mate reutilizada.
       </p>
     </div>
   </section>
 
-  <!-- Sección de Productos -->
-  <section id="products" class="bg-logo-bg py-12">
+  <section id="products" class="bg-white py-12">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-semibold text-center mb-8">Nuestras Bandejas</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Producto 1 -->
-        <div class="border rounded-lg p-6 shadow-lg text-center">
+        <div class="border rounded-lg p-6 shadow-lg text-center bg-logo-bg">
           <img src="imagen1.png" alt="Bandeja Clásica" class="w-full h-64 object-cover rounded mb-4">
           <h3 class="text-xl font-bold">Bandeja Clásica</h3>
-          <p class="text-gray-400 mt-2">Una bandeja elegante elaborada con yerba mate reutilizada, perfecta para cualquier hogar.</p>
+          <p class="text-gray-600 mt-2">Una bandeja elegante elaborada con yerba mate reutilizada, perfecta para cualquier hogar.</p>
           <p class="text-lg font-semibold mt-4">$13,600</p>
-          <a href="contact.html?product=Clasica" class="mt-4 inline-block bg-secundario-bg text-white py-2 px-4 rounded hover:bg-secundario-bg/80">Comprar</a>
+          <button onclick="mostrarContacto()" class="mt-4 inline-block bg-secundario-bg text-white py-2 px-4 rounded hover:bg-secundario-bg/80">Comprar</button>
         </div>
-        <!-- Producto 2 -->
-        <div class="border rounded-lg p-6 shadow-lg text-center">
+        <div class="border rounded-lg p-6 shadow-lg text-center bg-logo-bg">
           <img src="imagen2.png" alt="Bandeja Moderna" class="w-full h-64 object-cover rounded mb-4">
           <h3 class="text-xl font-bold">Bandeja Moderna</h3>
-          <p class="text-gray-400 mt-2">Diseño contemporáneo con la esencia de la yerba mate, ideal para espacios modernos.</p>
+          <p class="text-gray-600 mt-2">Diseño contemporáneo con la esencia de la yerba mate, ideal para espacios modernos.</p>
           <p class="text-lg font-semibold mt-4">$13,600</p>
-          <a href="contact.html?product=Moderna" class="mt-4 inline-block bg-secundario-bg text-white py-2 px-4 rounded hover:bg-secundario-bg/80">Comprar</a>
+          <button onclick="mostrarContacto()" class="mt-4 inline-block bg-secundario-bg text-white py-2 px-4 rounded hover:bg-secundario-bg/80">Comprar</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sección de Historia -->
-  <section id="about" class="py-12 bg-secundario-bg">
+  <section id="about" class="py-12 bg-secundario-bg text-white">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-semibold text-center mb-8">Nuestra Historia</h2>
-      <p class="text-lg max-w-3xl mx-auto">
-        Bandejita Mate nació como un proyecto innovador, creado por tres estudiantes que buscan resaltar la cultura y la sustentabilidad. La idea surgió de aprovechar un recurso natural representativo de la Argentina: la yerba mate. A partir de ella, se diseñaron bandejas decorativas y funcionales, logrando unir tradición, creatividad y conciencia ecológica. Aunque comenzó como un trabajo académico, se transformó en un emprendimiento que busca crecer en el mercado artesanal y sostenible.
+      <p class="text-lg max-w-3xl mx-auto text-center">
+        Bandejita Mate nació como un proyecto innovador, creado por tres estudiantes que buscan resaltar la cultura y la sustentabilidad. La idea surgió de aprovechar un recurso natural representativo de la Argentina: la yerba mate. A partir de ella, se diseñaron bandejas decorativas y funcionales, logrando unir tradición, creatividad y conciencia ecológica.
       </p>
     </div>
   </section>
 
-  <!-- Sección de Misión y Visión -->
-  <section id="mission-vision" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-semibold text-center mb-8">Misión y Visión</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="text-center">
-          <h3 class="text-xl font-bold">Misión</h3>
-          <p class="text-black mt-4">
-            Ofrecer bandejas decorativas elaboradas a partir de yerba mate reutilizada, fusionando tradición, creatividad y conciencia ambiental. Buscamos transformar un recurso culturalmente significativo en piezas únicas y sustentables que embellezcan los hogares y promuevan el consumo responsable.
-          </p>
-        </div>
-        <div class="text-center">
-          <h3 class="text-xl font-bold">Visión</h3>
-          <p class="text-black mt-4">
-            Convertirse en un referente nacional en el diseño y producción de artesanías sostenibles, expandiendo nuestro impacto en el mercado y consolidándonos como un ejemplo de innovación juvenil y compromiso con el medio ambiente.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección de Contacto -->
-  <section id="contact" class="bg-secundario-bg  py-12">
+  <section id="contact" class="bg-white py-12">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-semibold mb-8">Contáctanos</h2>
       <p class="text-lg">
-        Síguenos en Instagram: <a href="https://www.instagram.com/bandejitamate" class="underline hover:text-gray-400" target="_blank">@bandejitamate</a>
+        Síguenos en Instagram: <a href="https://www.instagram.com/bandejitamate" class="underline hover:text-gray-600" target="_blank">@bandejitamate</a>
       </p>
       <p class="text-lg mt-2">
-        Envíanos un correo: <a href="mailto:bandejitamate@gmail.com" class="underline hover:text-gray-400">bandejitamate@gmail.com</a>
+        Envíanos un correo: <a href="mailto:bandejitamate@gmail.com" class="underline hover:text-gray-600">bandejitamate@gmail.com</a>
       </p>
     </div>
   </section>
 
-  <!-- Pie de página -->
-  <footer class="bg-gray-800 text-white py-4 ">
+  <footer class="bg-gray-800 text-white py-4">
     <div class="container mx-auto text-center">
       <p>&copy; 2025 Bandejita Mate. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <script>
+    // --- Lógica para el menú móvil ---
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // --- Lógica para el botón de compra ---
+    function mostrarContacto() {
+      const mensaje = `Para comprar, podés contactarte con nosotros a través de:\n\nInstagram: @bandejitamate\nEmail: bandejitamate@gmail.com`;
+      alert(mensaje);
+    }
+  </script>
+
 </body>
 </html>
