@@ -37,7 +37,7 @@
                         </svg>
                     </a>
                 </li>
-                </ul>
+            </ul>
 
             <button id="menu-btn" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,7 +56,8 @@
 
     <section id="home" class="py-12">
         <div class="container mx-auto px-4 text-center">
-            <img src="logo.png" alt="Bandejita Mate Logo" class="mx-auto h-64 sm:h-80"> <h1 class="text-3xl md:text-4xl font-bold mt-4">La tradición es esencia</h1>
+            <img src="logo.png" alt="Bandejita Mate Logo" class="mx-auto h-64 sm:h-80">
+            <h1 class="text-3xl md:text-4xl font-bold mt-4">La tradición es esencia</h1>
             <p class="text-lg mt-4 max-w-2xl mx-auto">
                 Un proyecto innovador que une tradición, creatividad y sustentabilidad, creando bandejas decorativas a partir de yerba mate reutilizada.
             </p>
@@ -121,6 +122,22 @@
         </div>
     </section>
 
+    <div id="scroll-popup" class="hidden fixed bottom-5 right-5 w-80 bg-white p-6 rounded-lg shadow-2xl border z-50 transform transition-transform duration-300 ease-out">
+        <div class="flex flex-col items-start">
+            <button id="close-popup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <h3 class="text-xl font-bold text-secundario-bg mb-2">¡Descubre Más!</h3>
+            <p class="text-gray-600 mb-4">
+                Explora nuestro nuevo espacio y conoce más sobre la cultura del mate.
+            </p>
+            <a href="otra_pagina.html" class="w-full text-center bg-secundario-bg text-white py-2 px-4 rounded hover:bg-secundario-bg/80">
+                Ir a la Página
+            </a>
+        </div>
+    </div>
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto text-center">
             <p>&copy; 2025 Bandejita Mate. Todos los derechos reservados.</p>
@@ -141,4 +158,33 @@
             const mensaje = `Para comprar, puede contactarse con nosotros a través de:\n\nInstagram: @bandejitamate\nEmail: bandejitamate@gmail.com`;
             alert(mensaje);
         }
+
+        // --- LÓGICA AÑADIDA PARA EL POP-UP ---
+        const scrollPopup = document.getElementById('scroll-popup');
+        const closePopupBtn = document.getElementById('close-popup');
+        let popupShown = false; // Variable para asegurar que solo aparezca una vez
+
+        // Función para mostrar el pop-up
+        function showPopup() {
+            if (window.scrollY > 400 && !popupShown) {
+                scrollPopup.classList.remove('hidden');
+                scrollPopup.classList.add('translate-y-0', 'opacity-100');
+                popupShown = true; // Marcamos que ya se mostró
+                // Quitamos el listener para no seguir verificando
+                window.removeEventListener('scroll', showPopup);
+            }
+        }
+
+        // Función para ocultar el pop-up
+        function hidePopup() {
+            scrollPopup.classList.add('hidden');
+        }
+
+        // Añadimos los event listeners
+        window.addEventListener('scroll', showPopup);
+        closePopupBtn.addEventListener('click', hidePopup);
+
     </script>
+
+</body>
+</html>
